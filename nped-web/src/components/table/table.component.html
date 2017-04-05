@@ -1,0 +1,8 @@
+<p-growl [value]="notifications"></p-growl>
+
+<p-dataTable 
+[value]="tableContent">
+
+    <p-column *ngFor="let header of tableColumns" header={{header}} field={{header}}></p-column>
+
+</p-dataTable>
