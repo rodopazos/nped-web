@@ -14,8 +14,6 @@ import { TableService } from './table.service';
 // Others Imports
 import { DataTableModule, SharedModule, GrowlModule } from 'primeng/primeng';
 
-
-
 @NgModule({
     imports: [
         BrowserModule,
