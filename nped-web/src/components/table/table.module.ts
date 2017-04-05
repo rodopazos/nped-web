@@ -1,7 +1,6 @@
 // Angular Imports
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { SERVER_HTTP_PROVIDERS } from '@angular/platform-server/src/http';
 
 // OPT Imports
 import { IComponentServiceGet } from '../opt/interfaces/interface.service.get';
