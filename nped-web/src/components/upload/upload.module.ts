@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 // This Module Imports
-import { LoaderComponent } from './loader.component';
+import { UploadComponent } from './upload.component';
 
 // Others Imports
 import { FileUploadModule, GrowlModule } from 'primeng/primeng';
@@ -15,12 +15,12 @@ import { FileUploadModule, GrowlModule } from 'primeng/primeng';
         GrowlModule
     ],
     declarations: [
-        LoaderComponent,
+        UploadComponent,
     ],
     exports: [
-        LoaderComponent,
+        UploadComponent,
     ]
 })
-export class LoaderModule {
+export class UploadModule {
 
 }

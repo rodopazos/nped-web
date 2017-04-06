@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-loader-component',
-    templateUrl: 'loader.component.html',
-    styleUrls: ['loader.component.scss']
+    selector: 'app-upload-component',
+    templateUrl: 'upload.component.html',
+    styleUrls: ['upload.component.scss']
 })
-export class LoaderComponent {
+export class UploadComponent {
     notifications: Array<any>;
 
     uploadedFiles: Array<any>;

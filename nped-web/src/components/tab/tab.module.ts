@@ -9,7 +9,7 @@ import { ComponentServiceConfig } from '../opt/classes/class.service.config';
 
 // This Module Imports
 import { TabComponent } from './tab.component';
-import { LoaderModule } from '../loader/loader.module';
+import { UploadModule } from '../upload/upload.module';
 import { TableModule } from '../table/table.module';
 
 // Others Imports
@@ -18,7 +18,7 @@ import {TabViewModule} from 'primeng/primeng';
 @NgModule({
     imports: [
         TabViewModule,
-        LoaderModule,
+        UploadModule,
         TableModule,
     ],
     declarations: [
