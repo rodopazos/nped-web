@@ -9,7 +9,7 @@ import { ComponentServiceConfig } from '../opt/classes/class.service.config';
 
 // This Module Imports
 import { TableComponent } from './table.component';
-import { TableService } from './table.service';
+import { TableServiceGet } from './table.service.get';
 
 // Others Imports
 import { DataTableModule, SharedModule, GrowlModule } from 'primeng/primeng';
@@ -28,8 +28,7 @@ import { DataTableModule, SharedModule, GrowlModule } from 'primeng/primeng';
         TableComponent,
     ],
     providers: [
-        { provide: IComponentServiceGet, useClass: TableService },
-        { provide: IComponentServiceConfig, useClass: ComponentServiceConfig }
+        TableServiceGet
     ]
 })
 export class TableModule {

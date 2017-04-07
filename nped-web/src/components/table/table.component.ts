@@ -5,7 +5,7 @@ import { Component, Inject, OnInit} from '@angular/core';
 import { IComponentServiceGet } from '../opt/interfaces/interface.service.get';
 
 // This Module Imports
-import { TableService } from './table.service';
+import { TableServiceGet } from './table.service.get';
 
 @Component({
     selector: 'app-table-component',
@@ -56,11 +56,11 @@ export class TableComponent implements OnInit {
      * Creates an instance of TableComponent with the needed IComponentService provider
      * and initialize tableContent and tableColumns properties.
      *
-     * @param {TableService} service
+     * @param {TableServiceGet} service
      *
      * @memberOf TableComponent
      */
-    constructor(@Inject(IComponentServiceGet) private service: IComponentServiceGet) {
+    constructor(private service: TableServiceGet) {
         this.initializeProperties();
     }
 

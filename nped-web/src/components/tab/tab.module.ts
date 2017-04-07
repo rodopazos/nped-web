@@ -11,6 +11,7 @@ import { ComponentServiceConfig } from '../opt/classes/class.service.config';
 import { TabComponent } from './tab.component';
 import { UploadModule } from '../upload/upload.module';
 import { TableModule } from '../table/table.module';
+import { TreeViewModule } from './../tree/tree.module';
 
 // Others Imports
 import {TabViewModule} from 'primeng/primeng';
@@ -20,6 +21,7 @@ import {TabViewModule} from 'primeng/primeng';
         TabViewModule,
         UploadModule,
         TableModule,
+        TreeViewModule
     ],
     declarations: [
         TabComponent,
