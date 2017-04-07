@@ -1,0 +1,131 @@
+{
+    "data": 
+    [
+        {
+            "label": "Cuba",
+            "data": "Documentos De Cuba",
+            "expandedIcon": "fa-folder-open",
+            "collapsedIcon": "fa-folder",
+            "children": 
+            [
+                {
+                    "label": "Havana",
+                    "data": "Documents",
+                    "expandedIcon": "fa-folder-open",
+                    "collapsedIcon": "fa-folder",
+                    "children":
+                    [
+                        {
+                            "label": "Old Havana",
+                            "data": "Documents",
+                            "expandedIcon": "fa-folder-open",
+                            "collapsedIcon": "fa-folder",
+                            "children":
+                            [
+                                {
+                                    "label": "School 1",
+                                    "data": "Documents",
+                                    "expandedIcon": "fa-folder-open",
+                                    "collapsedIcon": "fa-folder",
+                                    "children":
+                                    [
+                                        
+                                        {"label": "Documents.html", "icon": "fa-file-word-o", "data": "Documents"},
+                                        {"label": "Interview.mkv", "icon": "fa-file-word-o", "data": "Interview"},
+                                        {"label": "Evaluations.xml", "icon": "fa-file-word-o", "data": "Evaluations"}
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "label": "Playa",
+                            "data": "Documents",
+                            "expandedIcon": "fa-folder-open",
+                            "collapsedIcon": "fa-folder",
+                            "children":
+                            [
+                                {
+                                    "label": "School 1",
+                                    "data": "Documents",
+                                    "expandedIcon": "fa-folder-open",
+                                    "collapsedIcon": "fa-folder",
+                                    "children":
+                                    [
+                                        
+                                        {"label": "Documents.html", "icon": "fa-file-word-o", "data": "Documents"},
+                                        {"label": "Interview.mkv", "icon": "fa-file-word-o", "data": "Interview"},
+                                        {"label": "Evaluations.xml", "icon": "fa-file-word-o", "data": "Evaluations"}
+                                    ]
+                                },
+                                {
+                                    "label": "School 2",
+                                    "data": "Documents",
+                                    "expandedIcon": "fa-folder-open",
+                                    "collapsedIcon": "fa-folder",
+                                    "children":
+                                    [
+                                        
+                                        {"label": "Documents.rtf", "icon": "fa-file-word-o", "data": "Documents"}
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "label": "Santiago de Cuba",
+                    "data": "Documents",
+                    "expandedIcon": "fa-folder-open",
+                    "collapsedIcon": "fa-folder",
+                    "children":
+                    [
+                        {
+                            "label": "Santiago de Cuba",
+                            "data": "Documents",
+                            "expandedIcon": "fa-folder-open",
+                            "collapsedIcon": "fa-folder",
+                            "children":
+                            [
+                                {
+                                    "label": "School 1",
+                                    "data": "Documents",
+                                    "expandedIcon": "fa-folder-open",
+                                    "collapsedIcon": "fa-folder",
+                                    "children":
+                                    [
+                                        
+                                        {"label": "Documents.doc", "icon": "fa-file-word-o", "data": "Documents"},
+                                        {"label": "Interview.mpg", "icon": "fa-file-word-o", "data": "Interview"},
+                                        {"label": "Evaluations.txt", "icon": "fa-file-word-o", "data": "Evaluations"}
+                                    ]
+                                },
+                                {
+                                    "label": "School 2",
+                                    "data": "Documents",
+                                    "expandedIcon": "fa-folder-open",
+                                    "collapsedIcon": "fa-folder",
+                                    "children":
+                                    [
+                                        
+                                        {"label": "Documents.rtf", "icon": "fa-file-word-o", "data": "Documents"}
+                                    ]
+                                },
+                                {
+                                    "label": "School 3",
+                                    "data": "Documents",
+                                    "expandedIcon": "fa-folder-open",
+                                    "collapsedIcon": "fa-folder",
+                                    "children":
+                                    [
+                                        
+                                        {"label": "Documents.rtf", "icon": "fa-file-word-o", "data": "Documents"}
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
