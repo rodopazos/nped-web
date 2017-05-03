@@ -13,7 +13,7 @@ import { TabModule } from '../components/tab/tab.module';
 import { AppComponent } from './app.component';
 
 // Others Imports
-import { DataTableModule, SharedModule, GrowlModule } from 'primeng/primeng';
+import { SharedModule } from 'primeng/primeng';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,8 @@ import { DataTableModule, SharedModule, GrowlModule } from 'primeng/primeng';
     BrowserModule,
     FormsModule,
     HttpModule,
-    TabModule
+    TabModule,
+    SharedModule,
   ],
   providers: [
     { provide: IComponentServiceConfig, useClass: ComponentServiceConfig }
