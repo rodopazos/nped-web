@@ -12,13 +12,14 @@ import { TableComponent } from './table.component';
 import { TableServiceGet } from './table.service.get';
 
 // Others Imports
-import { DataTableModule, SharedModule, GrowlModule } from 'primeng/primeng';
+import { DataTableModule, SharedModule, ButtonModule, GrowlModule } from 'primeng/primeng';
 
 @NgModule({
     imports: [
         BrowserModule,
         DataTableModule,
         SharedModule,
+        ButtonModule,
         GrowlModule
     ],
     declarations: [

@@ -1,8 +1,19 @@
 <p-growl [value]="notifications"></p-growl>
 
-<p-dataTable 
-[value]="tableContent">
+<p-dataTable #data [value]="tableContent" exportFilename="data">
+    <p-header>
+        <div class="ui-helper-clearfix">
+            <button
+                pButton
+                type="button"
+                icon="fa-file-o"
+                iconPos="left"
+                label='Export data'
+                (click)="data.exportCSV()"
+                style="float:right">
+            </button>
+        </div>
+    </p-header>
 
-    <p-column *ngFor="let header of tableColumns" header={{header}} field={{header}}></p-column>
-
+    <p-column [filter]="true" *ngFor="let header of tableColumns" header={{header}} field={{header}}></p-column>
 </p-dataTable>

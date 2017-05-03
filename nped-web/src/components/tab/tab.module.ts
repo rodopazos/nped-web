@@ -9,9 +9,9 @@ import { ComponentServiceConfig } from '../opt/classes/class.service.config';
 
 // This Module Imports
 import { TabComponent } from './tab.component';
-import { UploadModule } from '../upload/upload.module';
 import { TableModule } from '../table/table.module';
 import { TreeViewModule } from './../tree/tree.module';
+import { UploadModule } from '../upload/upload.module';
 
 // Others Imports
 import {TabViewModule} from 'primeng/primeng';
@@ -19,9 +19,9 @@ import {TabViewModule} from 'primeng/primeng';
 @NgModule({
     imports: [
         TabViewModule,
-        UploadModule,
         TableModule,
-        TreeViewModule
+        TreeViewModule,
+        UploadModule
     ],
     declarations: [
         TabComponent,
