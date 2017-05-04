@@ -92,10 +92,18 @@ export class TableComponent implements OnInit {
 
     private notify(status: boolean): void {
         if (status) {
-            this.notifications.push({severity: 'info', summary: 'Load susses', detail: 'All data has been loaded'});
+            this.notifications.push({
+                severity: 'info',
+                summary: 'Load susses',
+                detail: 'All data has been loaded'
+            });
         }
         else {
-            this.notifications.push({severity: 'error', summary: 'Load fail', detail: 'Data can not be load'});
+            this.notifications.push({
+                severity: 'error',
+                summary: 'Load fail',
+                detail: 'Data can not be load'
+            });
         }
     }
 }
