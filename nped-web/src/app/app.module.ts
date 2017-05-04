@@ -11,6 +11,8 @@ import { ComponentServiceConfig } from '../components/opt/classes/class.service.
 // This Module Imports
 import { TabModule } from '../components/tab/tab.module';
 import { AppComponent } from './app.component';
+import { RoutingModule } from './app.routes';
+import { LoginModule } from '../components/login/login.module';
 
 // Others Imports
 import { SharedModule } from 'primeng/primeng';
@@ -25,6 +27,8 @@ import { SharedModule } from 'primeng/primeng';
     HttpModule,
     TabModule,
     SharedModule,
+    LoginModule,
+    RoutingModule
   ],
   providers: [
     { provide: IComponentServiceConfig, useClass: ComponentServiceConfig }
