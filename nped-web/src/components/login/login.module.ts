@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 
 // This Module's Components
 import { LoginComponent } from './login.component';
+import { LoginServiceGet } from './login.service.get';
 
 // Others Imports
 import { InputTextModule, ButtonModule, GrowlModule } from 'primeng/primeng';
@@ -23,6 +24,9 @@ import { InputTextModule, ButtonModule, GrowlModule } from 'primeng/primeng';
     ],
     exports: [
         LoginComponent
+    ],
+    providers: [
+        LoginServiceGet
     ]
 })
 export class LoginModule {
