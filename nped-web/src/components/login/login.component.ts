@@ -1,6 +1,8 @@
 import { Router } from '@angular/router';
 import { Component } from '@angular/core';
 
+import { LoginServiceGet } from './login.service.get';
+
 @Component({
     selector: 'app-login-component',
     templateUrl: 'login.component.html',
@@ -31,7 +33,7 @@ export class LoginComponent {
      */
     notifications: Array<any>;
 
-    constructor(private router: Router) {
+    constructor(private router: Router, private service: LoginServiceGet) {
         this.initializeProperties();
     }
 
@@ -40,12 +42,18 @@ export class LoginComponent {
     }
 
     public login(): void {
-        if (this.user === 'user' && this.password === 'pass') {
-            this.router.navigate(['/home']);
-        }
-        else {
-            this.loginFailNotification();
-        }
+        this.service.getData().subscribe(
+            data => {
+                const result = data.json().data;
+
+                if (this.user === result.user && this.password === result.password) {
+                    this.router.navigate(['/home']);
+                }
+                else {
+                    this.loginFailNotification();
+                }
+            }
+        );
     }
 
     private loginFailNotification(): void {
