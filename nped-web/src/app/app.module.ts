@@ -5,8 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 // OPT Imports
-import { IComponentServiceConfig } from './../components/opt/interfaces/interface.service.config';
-import { ComponentServiceConfig } from '../components/opt/classes/class.service.config';
+import { IComponentServiceConfig } from '../services/opt/interfaces/config.interface.opt.service';
+import { ComponentServiceConfig } from '../services/opt/classes/config.class.opt.service';
 
 // This Module Imports
 import { TabModule } from '../components/tab/tab.module';
