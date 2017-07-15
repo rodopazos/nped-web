@@ -2,7 +2,7 @@
 import { Component, Inject, OnInit} from '@angular/core';
 
 // OPT Imports
-import { IComponentServiceGet } from '../opt/interfaces/interface.service.get';
+import { IComponentServiceGet } from '../../services/opt/interfaces/get.interface.opt.service';
 
 // This Module Imports
 import { TableServiceGet } from './table.service.get';
