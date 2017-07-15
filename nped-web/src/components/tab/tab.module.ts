@@ -3,9 +3,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 // OPT Imports
-import { IComponentServiceGet } from '../opt/interfaces/interface.service.get';
-import { IComponentServiceConfig } from '../opt/interfaces/interface.service.config';
-import { ComponentServiceConfig } from '../opt/classes/class.service.config';
+import { IComponentServiceGet } from '../../services/opt/interfaces/get.interface.opt.service';
+import { IComponentServiceConfig } from '../../services/opt/interfaces/config.interface.opt.service';
+import { ComponentServiceConfig } from '../../services/opt/classes/config.class.opt.service';
 
 // This Module Imports
 import { TabComponent } from './tab.component';
