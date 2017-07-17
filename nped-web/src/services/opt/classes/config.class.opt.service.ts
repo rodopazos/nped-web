@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
-import { IComponentServiceConfig } from '../interfaces/interface.service.config';
-import { SERVICES_CONFIG } from '../services.config';
+import { IComponentServiceConfig } from '../interfaces/config.interface.opt.service';
+import { SERVICES_CONFIG } from '../configuration.opt.services';
 
 @Injectable()
 /**

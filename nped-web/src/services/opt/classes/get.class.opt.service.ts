@@ -2,8 +2,8 @@ import { Inject, Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 
-import { IComponentServiceGet } from './../interfaces/interface.service.get';
-import { IComponentServiceConfig } from '../interfaces/interface.service.config';
+import { IComponentServiceGet } from '../interfaces/get.interface.opt.service';
+import { IComponentServiceConfig } from '../interfaces/config.interface.opt.service';
 
 @Injectable()
 /**
