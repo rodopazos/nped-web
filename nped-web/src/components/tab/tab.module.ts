@@ -11,17 +11,21 @@ import { ComponentServiceConfig } from '../../services/opt/classes/config.class.
 import { TabComponent } from './tab.component';
 import { TableModule } from '../table/table.module';
 import { TreeViewModule } from './../tree/tree.module';
+import { ChartViewModule } from './../chart/chart.module';
 import { UploadModule } from '../upload/upload.module';
-
+//import { ChartComponent } from '../chart/chart.component';
 // Others Imports
-import {TabViewModule} from 'primeng/primeng';
+import { TabViewModule } from 'primeng/primeng';
+import { ChartModule } from 'primeng/primeng';
 
 @NgModule({
     imports: [
         TabViewModule,
         TableModule,
         TreeViewModule,
-        UploadModule
+        UploadModule,
+        ChartModule,
+       ChartViewModule
     ],
     declarations: [
         TabComponent,

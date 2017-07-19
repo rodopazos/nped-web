@@ -7,6 +7,8 @@ import { IComponentServiceGet } from '../../services/opt/interfaces/get.interfac
 // This Module Imports
 import { TableServiceGet } from './table.service.get';
 
+import {ChartModule} from 'primeng/primeng';
+
 @Component({
     selector: 'app-table-component',
     templateUrl: 'table.component.html',
