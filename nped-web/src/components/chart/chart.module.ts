@@ -1,6 +1,7 @@
 // Angular Imports
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // OPT Imports
 import { IComponentServiceGet } from '../../services/opt/interfaces/get.interface.opt.service';
@@ -17,7 +18,7 @@ import { ChartModule } from 'primeng/primeng';
 @NgModule({
     imports: [
         BrowserModule,
-        ChartModule
+        ChartModule,
     ],
     declarations: [
         ChartComponent,

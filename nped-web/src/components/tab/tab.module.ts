@@ -13,10 +13,9 @@ import { TableModule } from '../table/table.module';
 import { TreeViewModule } from './../tree/tree.module';
 import { ChartViewModule } from './../chart/chart.module';
 import { UploadModule } from '../upload/upload.module';
-//import { ChartComponent } from '../chart/chart.component';
 // Others Imports
 import { TabViewModule } from 'primeng/primeng';
-import { ChartModule } from 'primeng/primeng';
+
 
 @NgModule({
     imports: [
@@ -24,8 +23,7 @@ import { ChartModule } from 'primeng/primeng';
         TableModule,
         TreeViewModule,
         UploadModule,
-        ChartModule,
-       ChartViewModule
+        ChartViewModule,
     ],
     declarations: [
         TabComponent,

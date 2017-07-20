@@ -16,24 +16,24 @@ import { LoginModule } from '../components/login/login.module';
 
 // Others Imports
 import { SharedModule } from 'primeng/primeng';
-
+import {RadioButtonModule} from 'primeng/primeng';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-    TabModule,
-    SharedModule,
-    LoginModule,
-    RoutingModule
-  ],
-  providers: [
-    { provide: IComponentServiceConfig, useClass: ComponentServiceConfig }
-  ],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent
+    ],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        HttpModule,
+        TabModule,
+        SharedModule,
+        LoginModule,
+        RoutingModule,
+    ],
+    providers: [
+        { provide: IComponentServiceConfig, useClass: ComponentServiceConfig }
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

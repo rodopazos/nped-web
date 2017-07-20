@@ -12,7 +12,14 @@
     </p-tabPanel>
 
     <p-tabPanel header="Statistics">
-        <app-chart-component></app-chart-component>
+        <app-chart-component 
+            [percent]='false'
+            [colors] = "[ '#578CA9','#F6D155','#004B8D','#F2552C',
+                        '#95DEE3','#EDCDC2','#CE3175','#5A7247',
+                        '#B93A32','#006E51', '#D8AE47','#B76BA3',
+                        '#009B77','#DD4124','#D65076','#9B2335' ]" 
+            [column] = "'Resultado'"
+        ></app-chart-component>
     </p-tabPanel>
 
 </p-tabView>

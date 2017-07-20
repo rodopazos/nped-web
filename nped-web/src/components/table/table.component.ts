@@ -1,13 +1,12 @@
 // Angular Imports
-import { Component, Inject, OnInit} from '@angular/core';
+import { Component, Inject, OnInit, ViewChild} from '@angular/core';
 
 // OPT Imports
 import { IComponentServiceGet } from '../../services/opt/interfaces/get.interface.opt.service';
 
 // This Module Imports
 import { TableServiceGet } from './table.service.get';
-
-import {ChartModule} from 'primeng/primeng';
+import { DataTable } from 'primeng/primeng';
 
 @Component({
     selector: 'app-table-component',
@@ -45,6 +44,8 @@ export class TableComponent implements OnInit {
      * @memberOf TableComponent
      */
     tableColumns: Array<string>;
+
+    @ViewChild(DataTable) dataTable : DataTable;
 
     /**
      * Define a property to use by <p-growl> notification component.
@@ -107,5 +108,8 @@ export class TableComponent implements OnInit {
                 detail: 'Data can not be load'
             });
         }
+    }
+    getFilteredData(){
+        console.log(this.dataTable.dataToRender);
     }
 }
