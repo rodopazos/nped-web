@@ -13,7 +13,9 @@ import { ChartComponent } from './chart.component';
 import { ChartServiceGet } from './chart.service.get';
 import { ChartModule } from 'primeng/primeng';
 import { DropdownModule } from 'primeng/primeng';
+
 // Others Imports
+import { Filter } from '../../services/globals/filter';
 
 @NgModule({
     imports: [
@@ -29,7 +31,9 @@ import { DropdownModule } from 'primeng/primeng';
         ChartComponent,
     ],
     providers: [
-        ChartServiceGet
+        ChartServiceGet,
+        Filter
+
     ]
 })
 export class ChartViewModule {

@@ -12,6 +12,6 @@
         { "Código": "I9I0I1I", "Sexo": "M", "Nac": "9/21/09", "Test": "2/22/09", "Resultado": "Pasó" },
         { "Código": "J0J1J2J", "Sexo": "M", "Nac": "10/22/09", "Test": "2/22/09", "Resultado": "Pasó" },
         { "Código": "K1K2K3K", "Sexo": "F", "Nac": "11/23/09", "Test": "11/21/09", "Resultado": "Pasó" },
-        { "Código": "L2L3L4L", "Sexo": "F", "Nac": "12/24/09", "Test": "12/22/09", "Resultado": "Incompleto" }
+        { "Código": "L2L3L4L", "Sexo": "M", "Nac": "12/24/09", "Test": "12/22/09", "Resultado": "Incompleto" }
     ]
 }

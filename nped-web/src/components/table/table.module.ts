@@ -13,7 +13,7 @@ import { TableServiceGet } from './table.service.get';
 
 // Others Imports
 import { DataTableModule, SharedModule, ButtonModule, GrowlModule } from 'primeng/primeng';
-
+import {Filter} from '../../services/globals/filter';
 @NgModule({
     imports: [
         BrowserModule,
@@ -29,7 +29,8 @@ import { DataTableModule, SharedModule, ButtonModule, GrowlModule } from 'primen
         TableComponent,
     ],
     providers: [
-        TableServiceGet
+        TableServiceGet,
+        Filter
     ]
 })
 export class TableModule {

@@ -1,5 +1,5 @@
 // Angular Imports
-import { Component, Inject, OnInit, ViewChild} from '@angular/core';
+import { Component, Inject, OnInit, ViewChild } from '@angular/core';
 
 // OPT Imports
 import { IComponentServiceGet } from '../../services/opt/interfaces/get.interface.opt.service';
@@ -7,6 +7,8 @@ import { IComponentServiceGet } from '../../services/opt/interfaces/get.interfac
 // This Module Imports
 import { TableServiceGet } from './table.service.get';
 import { DataTable } from 'primeng/primeng';
+import { Filter } from '../../services/globals/filter';
+
 
 @Component({
     selector: 'app-table-component',
@@ -45,7 +47,6 @@ export class TableComponent implements OnInit {
      */
     tableColumns: Array<string>;
 
-    @ViewChild(DataTable) dataTable : DataTable;
 
     /**
      * Define a property to use by <p-growl> notification component.
@@ -63,7 +64,11 @@ export class TableComponent implements OnInit {
      *
      * @memberOf TableComponent
      */
-    constructor(private service: TableServiceGet) {
+
+    @ViewChild(DataTable) dataTable: DataTable;
+    ammounts: { [id: string]: number };
+
+    constructor(private service: TableServiceGet, private filter: Filter) {
         this.initializeProperties();
     }
 
@@ -73,11 +78,22 @@ export class TableComponent implements OnInit {
      *
      * @memberOf TableComponent
      */
+    keys() {
+        return Object.keys(this.ammounts);
+    }
+    total(): string {
+        if (this.dataTable.filteredValue == undefined) {
+            return this.tableContent.length.toString();
+        }
+        return this.dataTable.filteredValue.length.toString();
+    }
+
     ngOnInit(): void {
         this.service.getData().subscribe(
             data => {
                 this.tableContent = data.json().data;
                 this.tableColumns = Object.keys(this.tableContent[0]);
+                this.ammounts = this.filter.filter(this.tableContent, "Resultado");
                 this.notify(true);
             },
             error => {
@@ -85,12 +101,19 @@ export class TableComponent implements OnInit {
                 this.notify(false);
             }
         );
+        this.dataTable.onFilter.subscribe(e => {
+            
+            if (!this.dataTable.filteredValue) 
+                this.dataTable.filteredValue=this.tableContent;
+            this.filter.filter(this.dataTable.filteredValue, "Resultado") ;
+        })
     }
 
     private initializeProperties(): void {
         this.tableContent = new Array<any>();
         this.tableColumns = new Array<string>();
         this.notifications = new Array<any>();
+        this.ammounts = {};
     }
 
     private notify(status: boolean): void {
@@ -108,8 +131,5 @@ export class TableComponent implements OnInit {
                 detail: 'Data can not be load'
             });
         }
-    }
-    getFilteredData(){
-        console.log(this.dataTable.dataToRender);
     }
 }
