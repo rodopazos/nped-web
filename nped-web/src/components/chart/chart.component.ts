@@ -10,12 +10,12 @@ import { SelectItem, Dropdown } from 'primeng/primeng';
 })
 export class ChartComponent implements OnInit {
     data: any;
-    //cols: SelectItem[];
+    cols: SelectItem[];
     type: string;  //chart type (pie,donut,line ... )
-    @Input() column: string;  //column to filter
+    column: string;  //column to filter
     @Input() percent: boolean;  //percent or total
     @Input() colors: Array<string>;
-    //@Input() columns: string[];
+    @Input() columns: string[];
     options: any;
 
     constructor(private service: ChartServiceGet) {
@@ -30,18 +30,21 @@ export class ChartComponent implements OnInit {
                 this.initializeProperties();
             }
         );
-        //this.cols = [];
-        // for (var i = 0; i < this.columns.length; i++) {
-        //     this.cols.push({ label: this.columns[i].toString(), value: this.columns[i] });
-        // }
-        // console.log(this.cols);
-        // console.log(this.columns);
+        this.columns = ['Resultado','Sexo'];
+        for (var i = 0; i < this.columns.length; i++) {
+            this.cols.push({ label: this.columns[i], value: this.columns[i] });
+        }
+        
+        console.log(this.cols);
+        console.log(this.columns);
     }
 
     private initializeProperties(): void {
         this.type = "pie";
         this.percent = true;
+        this.column = "Resultado";
         this.data = [];
+        this.cols =[];
     }
 
     filter(data: Array<any>, column: string): { [id: string]: number } {

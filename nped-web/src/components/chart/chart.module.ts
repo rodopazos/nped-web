@@ -12,13 +12,15 @@ import { ComponentServiceConfig } from '../../services/opt/classes/config.class.
 import { ChartComponent } from './chart.component';
 import { ChartServiceGet } from './chart.service.get';
 import { ChartModule } from 'primeng/primeng';
-
+import { DropdownModule } from 'primeng/primeng';
 // Others Imports
 
 @NgModule({
     imports: [
         BrowserModule,
         ChartModule,
+        DropdownModule,
+        BrowserAnimationsModule
     ],
     declarations: [
         ChartComponent,
