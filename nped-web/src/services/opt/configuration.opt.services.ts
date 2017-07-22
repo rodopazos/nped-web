@@ -1,6 +1,6 @@
 export const SERVICES_CONFIG = {
-    'table-service-get': '/src/data/table-data.json',
-    'tree-service-get': '/src/data/tree-data.json',
-    'login-service-get': '/src/data/login-data.json'
+    'table-service-get': 'assets/data/table-data.json',
+    'tree-service-get': 'assets/data/tree-data.json',
+    'login-service-get': 'assets/data/login-data.json'
 };
 
