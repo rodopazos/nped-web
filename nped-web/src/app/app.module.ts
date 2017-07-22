@@ -9,10 +9,10 @@ import { IComponentServiceConfig } from '../services/opt/interfaces/config.inter
 import { ComponentServiceConfig } from '../services/opt/classes/config.class.opt.service';
 
 // This Module Imports
-import { TabModule } from '../components/tab/tab.module';
+import { TabModule } from '../modules/tab/tab.module';
 import { AppComponent } from './app.component';
 import { RoutingModule } from './app.routes';
-import { LoginModule } from '../components/login/login.module';
+import { LoginModule } from '../modules/login/login.module';
 
 // Others Imports
 import { SharedModule } from 'primeng/primeng';
