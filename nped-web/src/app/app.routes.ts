@@ -1,8 +1,8 @@
 import { ModuleWithProviders } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { LoginComponent } from './../components/login/login.component';
-import { TabComponent } from './../components/tab/tab.component';
+import { LoginComponent } from '../modules/login/login.component';
+import { TabComponent } from '../modules/tab/tab.component';
 
 export const appRoutes: Routes = [
     {
