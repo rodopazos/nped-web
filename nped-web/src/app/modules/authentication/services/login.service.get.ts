@@ -3,12 +3,12 @@ import { Http, Response } from '@angular/http';
 import { Injectable, Inject } from '@angular/core';
 
 // OPT Imports
-import { ComponentServiceGet } from '../../services/opt/classes/get.class.opt.service';
-import { IComponentServiceConfig } from '../../services/opt/interfaces/config.interface.opt.service';
+import { ComponentServiceGet } from '../../../services/opt/classes/get.class.opt.service';
+import { IComponentServiceConfig } from '../../../services/opt/interfaces/config.interface.opt.service';
 
 // Others Imports
 import { Observable } from 'rxjs/Rx';
-import { ComponentServiceConfig } from '../../services/opt/classes/config.class.opt.service';
+import { ComponentServiceConfig } from '../../../services/opt/classes/config.class.opt.service';
 
 @Injectable()
 /**

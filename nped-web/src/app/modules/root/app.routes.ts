@@ -1,8 +1,8 @@
 import { ModuleWithProviders } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { LoginComponent } from '../modules/login/login.component';
-import { TabComponent } from '../modules/tab/tab.component';
+import { LoginPage } from '../../modules/authentication/pages/login/login.page';
+import { DashboardPage } from '../../modules/dashboard/pages/dashboard.page';
 
 export const appRoutes: Routes = [
     {
@@ -12,11 +12,11 @@ export const appRoutes: Routes = [
     },
     {
         path: 'login',
-        component: LoginComponent
+        component: LoginPage
     },
     {
         path: 'home',
-        component: TabComponent
+        component: DashboardPage
     }
 ];
 

@@ -5,8 +5,9 @@ import {Component} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 // This Module's Components
-import { LoginComponent } from './login.component';
-import { LoginServiceGet } from './login.service.get';
+import { LoginComponent } from './components/login/login.component';
+import { LoginPage } from './pages/login/login.page';
+import { LoginServiceGet } from './services/login.service.get';
 
 // Others Imports
 import { InputTextModule, ButtonModule, GrowlModule } from 'primeng/primeng';
@@ -21,14 +22,16 @@ import { InputTextModule, ButtonModule, GrowlModule } from 'primeng/primeng';
     ],
     declarations: [
         LoginComponent,
+        LoginPage
     ],
     exports: [
-        LoginComponent
+        LoginComponent,
+        LoginPage
     ],
     providers: [
         LoginServiceGet
     ]
 })
-export class LoginModule {
+export class AuthenticationModule {
 
 }

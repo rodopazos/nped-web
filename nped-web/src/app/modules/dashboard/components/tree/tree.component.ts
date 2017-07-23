@@ -1,11 +1,8 @@
 // Angular Imports
 import { Component, Inject, OnInit } from '@angular/core';
 
-// OPT Imports
-import { IComponentServiceGet } from '../../services/opt/interfaces/get.interface.opt.service';
-
 // This Module Imports
-import { TreeServiceGet } from './tree.service.get';
+import { TreeServiceGet } from '../../services/tree.service.get';
 
 @Component({
     selector: 'app-tree-component',

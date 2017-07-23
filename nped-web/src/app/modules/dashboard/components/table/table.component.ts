@@ -1,11 +1,8 @@
 // Angular Imports
-import { Component, Inject, OnInit} from '@angular/core';
-
-// OPT Imports
-import { IComponentServiceGet } from '../../services/opt/interfaces/get.interface.opt.service';
+import { Component, Inject, OnInit } from '@angular/core';
 
 // This Module Imports
-import { TableServiceGet } from './table.service.get';
+import { TableServiceGet } from '../../services/table.service.get';
 
 @Component({
     selector: 'app-table-component',

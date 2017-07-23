@@ -5,14 +5,14 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 // OPT Imports
-import { IComponentServiceConfig } from '../services/opt/interfaces/config.interface.opt.service';
-import { ComponentServiceConfig } from '../services/opt/classes/config.class.opt.service';
+import { IComponentServiceConfig } from '../../services/opt/interfaces/config.interface.opt.service';
+import { ComponentServiceConfig } from '../../services/opt/classes/config.class.opt.service';
 
 // This Module Imports
-import { TabModule } from '../modules/tab/tab.module';
 import { AppComponent } from './app.component';
 import { RoutingModule } from './app.routes';
-import { LoginModule } from '../modules/login/login.module';
+import { DashboardModule } from '../dashboard/dashboard.module';
+import { AuthenticationModule } from '../authentication/authentication.module';
 
 // Others Imports
 import { SharedModule } from 'primeng/primeng';
@@ -25,10 +25,10 @@ import { SharedModule } from 'primeng/primeng';
     BrowserModule,
     FormsModule,
     HttpModule,
-    TabModule,
     SharedModule,
-    LoginModule,
-    RoutingModule
+    AuthenticationModule,
+    RoutingModule,
+    DashboardModule
   ],
   providers: [
     { provide: IComponentServiceConfig, useClass: ComponentServiceConfig }

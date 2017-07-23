@@ -1,21 +1,21 @@
 import { Router } from '@angular/router';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
-import { LoginServiceGet } from './login.service.get';
+import { LoginServiceGet } from '../../services/login.service.get';
 
 @Component({
-    selector: 'app-login-component',
-    templateUrl: 'login.component.html',
-    styleUrls: ['login.component.scss']
+    selector: 'app-login-page',
+    templateUrl: 'login.page.html',
+    styleUrls: ['login.page.scss']
 })
-export class LoginComponent {
+export class LoginPage {
     /**
      * Define a property for the user identification name
      *
      * @type {string}
      * @memberof LoginComponent
      */
-    user: string;
+    @Input() user: string;
 
     /**
      * Define a property for the user password
@@ -23,7 +23,7 @@ export class LoginComponent {
      * @type {string}
      * @memberof LoginComponent
      */
-    password: string;
+    @Input() password: string;
 
         /**
      * Define a property to use by <p-growl> notification component.
