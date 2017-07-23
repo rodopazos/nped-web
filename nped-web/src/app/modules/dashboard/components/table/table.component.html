@@ -1,6 +1,6 @@
 <p-growl [value]="notifications"></p-growl>
 
-<p-dataTable #data
+<p-dataTable #table
     [value]="tableContent"
     [rows]="10"
     [paginator]="true"
@@ -16,11 +16,16 @@
                 icon="fa-file-o"
                 iconPos="left"
                 label='Export data'
-                (click)="data.exportCSV()"
+                (click)="table.exportCSV()"
                 style="float:right">
             </button>
         </div>
     </p-header>
 
-    <p-column [filter]="true" *ngFor="let header of tableColumns" header={{header}} field={{header}}></p-column>
+    <p-column
+        [filter]="true"
+        *ngFor="let header of tableColumns"
+        header={{header}}
+        field={{header}}>
+    </p-column>
 </p-dataTable>
