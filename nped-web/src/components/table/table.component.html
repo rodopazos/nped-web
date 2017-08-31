@@ -1,7 +1,7 @@
 <p-growl [value]="notifications"></p-growl>
 
 <ul >
-    <li style="display: inline;margin-right:20px;" *ngFor="let key of keys()"> {{key}} : {{ammounts[key] }}</li> 
+    <li style="display: inline;margin-right:20px;" *ngFor="let key of keys()"> {{key}} : {{ammounts[key] }}</li>
     <li style="display: inline;" ><strong>Total: {{total()}}</strong></li>
 </ul>
 
@@ -20,7 +20,7 @@
                 type="button"
                 icon="fa-file-o"
                 iconPos="left"
-                label='Export data'
+                label='Exportar datos'
                 (click)="data.exportCSV()"
                 style="float:right">
             </button>

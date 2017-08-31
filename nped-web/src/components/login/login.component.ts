@@ -59,8 +59,8 @@ export class LoginComponent {
     private loginFailNotification(): void {
         this.notifications.push({
             severity: 'error',
-            summary: 'Credential Error',
-            detail: 'Your user name or password is incorrect'
+            summary: 'Error de credenciales',
+            detail: 'Su nombre de usuario o contraseña son incorrectos'
         });
     }
 

@@ -102,8 +102,8 @@ export class TableComponent implements OnInit {
             }
         );
         this.dataTable.onFilter.subscribe(e => {
-            
-            if (!this.dataTable.filteredValue) 
+
+            if (!this.dataTable.filteredValue)
                 this.dataTable.filteredValue=this.tableContent;
             this.filter.filter(this.dataTable.filteredValue, "Resultado") ;
         })
@@ -120,15 +120,15 @@ export class TableComponent implements OnInit {
         if (status) {
             this.notifications.push({
                 severity: 'info',
-                summary: 'Load susses',
-                detail: 'All data has been loaded'
+                summary: 'Datos Actualizados',
+                detail: 'Todos los datos han sido cargados'
             });
         }
         else {
             this.notifications.push({
                 severity: 'error',
-                summary: 'Load fail',
-                detail: 'Data can not be load'
+                summary: 'Error',
+                detail: 'Los datos no se han podido cargar'
             });
         }
     }

@@ -1,8 +1,11 @@
 <p-growl [value]="notifications"></p-growl>
 
-<p-fileUpload 
-    name="files[]" 
-    url="http://192.168.20.65:4200" 
+<p-fileUpload
+    chooseLabel='Buscar'
+    uploadLabel='Subir'
+    cancelLabel='Cancelar'
+    name="files[]"
+    url="http://192.168.20.65:4200"
     multiple="multiple"
     (onUpload)="onUpload($event)"
     (onError)="onError($event)">
