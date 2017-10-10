@@ -1,11 +1,17 @@
 <p-growl [value]="notifications"></p-growl>
 
 <div class="login-context">
-    <h3>Usuario</h3>
-    <input type="text" pInputText [(ngModel)]="user" />
+    <div>
+        <h3>Usuario</h3>
+        <span><i class="fa fa-user"></i></span>
+        <input type="text" pInputText [(ngModel)]="user" />
+    </div>
 
-    <h3>Contraseña</h3>
-    <input type="password" pInputText [(ngModel)]="password" />
+    <div>
+        <h3>Contraseña</h3>
+        <span><i class="fa fa-lock"></i></span>
+        <input type="password" pInputText [(ngModel)]="password" />
+    </div>
 
     <button pButton type="button" (click)="login()" label="Entrar"></button>
 </div>
