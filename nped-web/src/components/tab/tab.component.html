@@ -1,17 +1,17 @@
 <p-tabView>
-    <p-tabPanel header="Datos">
+    <p-tabPanel header="Datos" leftIcon="fa-book">
         <app-table-component></app-table-component>
     </p-tabPanel>
 
-    <p-tabPanel header="Planificación">
+    <p-tabPanel header="Planificación" leftIcon="fa-calendar">
         <app-tree-component></app-tree-component>
     </p-tabPanel>
 
-    <p-tabPanel header="Importar">
+    <p-tabPanel header="Importar" leftIcon="fa-upload">
         <app-upload-component></app-upload-component>
     </p-tabPanel>
 
-    <p-tabPanel header="Estadísticas">
+    <p-tabPanel header="Estadísticas" leftIcon="fa-bar-chart">
         <app-chart-component
             [percent]='false'
             [colors] = "[ '#578CA9','#D65076','#004B8D','#F6D155','#F2552C',
@@ -22,7 +22,7 @@
         ></app-chart-component>
     </p-tabPanel>
 
-    <p-tabPanel header="Administración de usuarios">
+    <p-tabPanel header="Administración de usuarios" leftIcon="fa-user">
         <app-administration></app-administration>
     </p-tabPanel>
 
