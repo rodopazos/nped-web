@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     border: 1px solid #ccc;
     margin-left: auto;
     margin-right: auto;
@@ -10,6 +9,7 @@
     margin-top: 50px;
     width: 300px;
     padding-bottom: 20px;
+    text-align: center;
 
     button {
         margin-top: 20px;
