@@ -13,6 +13,8 @@ import { TableModule } from '../table/table.module';
 import { TreeViewModule } from './../tree/tree.module';
 import { ChartViewModule } from './../chart/chart.module';
 import { UploadModule } from '../upload/upload.module';
+import { AdministrationComponent } from '../administration/administration.component';
+
 // Others Imports
 import { TabViewModule } from 'primeng/primeng';
 
@@ -27,6 +29,7 @@ import { TabViewModule } from 'primeng/primeng';
     ],
     declarations: [
         TabComponent,
+        AdministrationComponent
     ],
     exports: [
         TabComponent,
