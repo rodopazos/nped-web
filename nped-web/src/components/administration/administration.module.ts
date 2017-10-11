@@ -15,7 +15,8 @@ import {
     DataTableModule,
     SharedModule,
     FieldsetModule,
-    TabViewModule
+    TabViewModule,
+    DropdownModule
 } from 'primeng/primeng';
 
 @NgModule({
@@ -28,7 +29,8 @@ import {
         DataTableModule,
         SharedModule,
         FieldsetModule,
-        TabViewModule
+        TabViewModule,
+        DropdownModule
     ],
     declarations: [
         AdministrationComponent
