@@ -1,3 +1,151 @@
-<p>
-    administration works!
-</p>
+<div class="administration-container">
+
+    <p-fieldset legend="Agregar usuario">
+
+        <div class="administration-panel">
+
+            <div class="input-container">
+
+                <div class="label-group">
+
+                    <label>Nombre:</label>
+                    <label>Apellidos:</label>
+                    <label>Rol:</label>
+                    <label>Usuario:</label>
+                    <label>Contraseña:</label>
+
+                </div>
+
+                <div class="input-group">
+
+                    <input type="text" pInputText placeholder="Escriba el nombre">
+                    <input type="text" pInputText placeholder="Escriba los apellidos">
+                    <input type="text" pInputText placeholder="Escriba el rol">
+                    <input type="text" pInputText placeholder="Escriba el usuario">
+                    <input type="password" pInputText placeholder="Escriba la contraseña">
+
+                </div>
+
+            </div>
+
+            <div class="administration-buttons-panel">
+
+                <button
+                    pButton
+                    type="button"
+                    icon="fa-check"
+                    (click)="accept()"
+                    class="ui-button-success"
+                    label="Agregar">
+                </button>
+
+                <button
+                    pButton
+                    type="button"
+                    (click)="cancel()"
+                    icon="fa-remove"
+                    class="ui-button-danger"
+                    label="Cancelar">
+                </button>
+
+            </div>
+
+        </div>
+
+    </p-fieldset>
+
+    <div class="users-panel">
+
+        <p-tabView>
+
+            <p-tabPanel header="Usuarios por salvar">
+
+                <p-dataTable
+                    [rows]="10"
+                    [paginator]="true"
+                    [pageLinks]="5"
+                    [responsive]="true"
+                    [value]="users">
+
+                    <p-column [filter]="true" field="" header="Nombre"></p-column>
+                    <p-column [filter]="true" field="" header="Apellido"></p-column>
+                    <p-column [filter]="true" field="" header="Rol"></p-column>
+                    <p-column [filter]="true" field="" header="Usuario"></p-column>
+
+                </p-dataTable>
+
+                <div class="for-save-buttons">
+
+                    <button
+                        pButton
+                        type="button"
+                        icon="fa-check"
+                        (click)="accept()"
+                        class="ui-button-success"
+                        label="Salvar">
+                    </button>
+
+                    <button
+                        pButton
+                        type="button"
+                        (click)="cancel()"
+                        icon="fa-remove"
+                        class="ui-button-danger"
+                        label="Eliminar">
+                    </button>
+
+                </div>
+
+            </p-tabPanel>
+
+            <p-tabPanel header="Usuarios en el sistema">
+
+                <p-dataTable
+                    [rows]="10"
+                    [paginator]="true"
+                    [pageLinks]="5"
+                    [responsive]="true"
+                    [value]="users">
+
+                    <p-column [filter]="true" field="" header="Nombre"></p-column>
+                    <p-column [filter]="true" field="" header="Apellido"></p-column>
+                    <p-column [filter]="true" field="" header="Rol"></p-column>
+                    <p-column [filter]="true" field="" header="Usuario"></p-column>
+
+                </p-dataTable>
+
+                <div class="for-edit-buttons">
+
+                    <button
+                        pButton
+                        type="button"
+                        icon="fa-check"
+                        (click)="accept()"
+                        class="ui-button-success"
+                        label="Salvar">
+                    </button>
+
+                    <button
+                        pButton
+                        type="button"
+                        (click)="cancel()"
+                        icon="fa-remove"
+                        class="ui-button-danger"
+                        label="Eliminar">
+                    </button>
+
+                </div>
+
+            </p-tabPanel>
+
+        </p-tabView>
+
+    </div>
+
+</div>
+
+
+
+
+
+
