@@ -19,9 +19,17 @@
                 <div class="input-group">
 
                     <input type="text" pInputText placeholder="Escriba el nombre">
+
                     <input type="text" pInputText placeholder="Escriba los apellidos">
-                    <input type="text" pInputText placeholder="Escriba el rol">
+
+                    <p-dropdown
+                        [style]="{'width':'100%'}"
+                        placeholder="Seleccione el rol"
+                        [options]="[{ label: '1', value: 1 }, { label: '2', value: 2 }]">
+                    </p-dropdown>
+
                     <input type="text" pInputText placeholder="Escriba el usuario">
+
                     <input type="password" pInputText placeholder="Escriba la contraseña">
 
                 </div>
@@ -74,7 +82,7 @@
 
                 </p-dataTable>
 
-                <div class="for-save-buttons">
+                <div class="user-panel-buttons">
 
                     <button
                         pButton
@@ -114,7 +122,7 @@
 
                 </p-dataTable>
 
-                <div class="for-edit-buttons">
+                <div class="user-panel-buttons">
 
                     <button
                         pButton

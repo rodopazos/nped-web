@@ -47,11 +47,9 @@
     .users-panel {
         width: 70%;
 
-        .for-save-buttons {
-            margin-top:  1em;
-        }
-
-        .for-edit-buttons {
+        .user-panel-buttons {
+            display: flex;
+            justify-content: center;
             margin-top:  1em;
         }
     }
