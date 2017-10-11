@@ -15,77 +15,18 @@ import { Filter } from '../../services/globals/filter';
     templateUrl: 'table.component.html',
     styleUrls: ['table.component.scss']
 })
-/**
- * Define a component to use as a table.
- *
- * Dependencies:
- *     DataTableModule
- *     SharedModule
- *
- * Providers:
- *     TableService
- *
- * Implement:
- *     OnInit interface
- */
 export class TableComponent implements OnInit {
-    /**
-     * Define a property used by primeNG <p-dataTable></p-dataTable> component.
-     *
-     * @type {Array<any>}
-     * @memberOf TableComponent
-     */
-    tableContent: Array<any>;
+    @ViewChild(DataTable) dataTable: DataTable;
 
-    /**
-     * Define a property used by primeNG <p-dataTable></p-dataTable> component header
-     * and field properties. This contain the headers of the columns of the table.
-     * This property is auto load from tableContent property.
-     *
-     * @type {Array<string>}
-     * @memberOf TableComponent
-     */
+    tableContent: Array<any>;
+    notifications: Array<any>;
     tableColumns: Array<string>;
 
-
-    /**
-     * Define a property to use by <p-growl> notification component.
-     *
-     * @type {Array<any>}
-     * @memberOf TableComponent
-     */
-    notifications: Array<any>;
-
-    /**
-     * Creates an instance of TableComponent with the needed IComponentService provider
-     * and initialize tableContent and tableColumns properties.
-     *
-     * @param {TableServiceGet} service
-     *
-     * @memberOf TableComponent
-     */
-
-    @ViewChild(DataTable) dataTable: DataTable;
     ammounts: { [id: string]: number };
+    filterOptions: { [key: string]: Array<{ label: string, value: string }> };
 
     constructor(private service: TableServiceGet, private filter: Filter) {
         this.initializeProperties();
-    }
-
-    /**
-     * Get the table necessary data for the component and set the tableContent and
-     * tableColumns properties.
-     *
-     * @memberOf TableComponent
-     */
-    keys() {
-        return Object.keys(this.ammounts);
-    }
-    total(): string {
-        if (this.dataTable.filteredValue == undefined) {
-            return this.tableContent.length.toString();
-        }
-        return this.dataTable.filteredValue.length.toString();
     }
 
     ngOnInit(): void {
@@ -93,6 +34,9 @@ export class TableComponent implements OnInit {
             data => {
                 this.tableContent = data.json().data;
                 this.tableColumns = Object.keys(this.tableContent[0]);
+
+                this.initializeFilterOptions();
+
                 this.ammounts = this.filter.filter(this.tableContent, "Resultado");
                 this.notify(true);
             },
@@ -113,6 +57,7 @@ export class TableComponent implements OnInit {
         this.tableContent = new Array<any>();
         this.tableColumns = new Array<string>();
         this.notifications = new Array<any>();
+        this.filterOptions = {};
         this.ammounts = {};
     }
 
@@ -131,5 +76,40 @@ export class TableComponent implements OnInit {
                 detail: 'Los datos no se han podido cargar'
             });
         }
+    }
+
+    keys() {
+        return Object.keys(this.ammounts);
+    }
+
+    total(): string {
+        if (this.dataTable.filteredValue == undefined) {
+            return this.tableContent.length.toString();
+        }
+        return this.dataTable.filteredValue.length.toString();
+    }
+
+    isDropDownColumn(column: string): boolean {
+        return column == 'Sexo' || column == 'Resultado';
+    }
+
+    initializeFilterOptions(): void {
+        this.tableColumns.forEach(
+            column => {
+                if (this.isDropDownColumn(column)) {
+                    let set = new Set<string>();
+
+                    this.tableContent.forEach(
+                        content => set.add(content[column])
+                    );
+                    let option = new Array<{ label: string, value: string }>();
+
+                    set.forEach(
+                        item => option.push({ label: item, value: item })
+                    );
+                    this.filterOptions[column] = option;
+                }
+            }
+        );
     }
 }
