@@ -1,4 +1,5 @@
 // Angular Imports
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
@@ -16,7 +17,7 @@ import { LoginModule } from '../components/login/login.module';
 
 // Others Imports
 import { SharedModule } from 'primeng/primeng';
-import {RadioButtonModule} from 'primeng/primeng';
+import { RadioButtonModule } from 'primeng/primeng';
 
 @NgModule({
     declarations: [
@@ -30,6 +31,7 @@ import {RadioButtonModule} from 'primeng/primeng';
         SharedModule,
         LoginModule,
         RoutingModule,
+        BrowserAnimationsModule
     ],
     providers: [
         { provide: IComponentServiceConfig, useClass: ComponentServiceConfig }
