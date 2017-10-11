@@ -1,11 +1,40 @@
+// Angular Imports
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
+import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+
+// This Module's Components
 import { AdministrationComponent } from './administration.component';
+
+// Others Imports
+import {
+    InputTextModule,
+    ButtonModule,
+    GrowlModule,
+    DataTableModule,
+    SharedModule,
+    FieldsetModule,
+    TabViewModule
+} from 'primeng/primeng';
 
 @NgModule({
     imports: [
-        CommonModule
+        BrowserModule,
+        InputTextModule,
+        ButtonModule,
+        FormsModule,
+        GrowlModule,
+        DataTableModule,
+        SharedModule,
+        FieldsetModule,
+        TabViewModule
     ],
-    declarations: [AdministrationComponent]
+    declarations: [
+        AdministrationComponent
+    ],
+    exports: [
+        AdministrationComponent
+    ]
 })
 export class AdministrationModule { }
