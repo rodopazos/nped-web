@@ -1,0 +1,61 @@
+<p-fieldset legend="Agregar usuario">
+
+    <div class="add-user-panel">
+
+        <div class="input-container">
+
+            <div class="label-group">
+
+                <label>Nombre:</label>
+                <label>Apellidos:</label>
+                <label>Rol:</label>
+                <label>Usuario:</label>
+                <label>Contraseña:</label>
+
+            </div>
+
+            <div class="input-group">
+
+                <input type="text" pInputText placeholder="Escriba el nombre">
+
+                <input type="text" pInputText placeholder="Escriba los apellidos">
+
+                <p-dropdown
+                    [style]="{'width':'100%'}"
+                    placeholder="Seleccione el rol"
+                    [options]="[{ label: '1', value: 1 }, { label: '2', value: 2 }]">
+                </p-dropdown>
+
+                <input type="text" pInputText placeholder="Escriba el usuario">
+
+                <input type="password" pInputText placeholder="Escriba la contraseña">
+
+            </div>
+
+        </div>
+
+        <div class="add-user-panel-buttons">
+
+            <button
+                pButton
+                type="button"
+                icon="fa-check"
+                (click)="accept()"
+                class="ui-button-success"
+                label="Agregar">
+            </button>
+
+            <button
+                pButton
+                type="button"
+                (click)="cancel()"
+                icon="fa-remove"
+                class="ui-button-danger"
+                label="Cancelar">
+            </button>
+
+        </div>
+
+    </div>
+
+</p-fieldset>

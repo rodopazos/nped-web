@@ -1,23 +1,19 @@
 // Angular Imports
-
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 // This Module's Components
-import { AdministrationComponent } from './administration.component';
-import { AddUserPanelModule } from '../add-user-panel/add-user-panel.module';
+import { AddUserPanelComponent } from './add-user-panel.component';
 
 // Others Imports
 import {
     InputTextModule,
     ButtonModule,
     GrowlModule,
-    DataTableModule,
     SharedModule,
     FieldsetModule,
-    TabViewModule,
     DropdownModule
 } from 'primeng/primeng';
 
@@ -28,18 +24,15 @@ import {
         ButtonModule,
         FormsModule,
         GrowlModule,
-        DataTableModule,
         SharedModule,
         FieldsetModule,
-        TabViewModule,
-        DropdownModule,
-        AddUserPanelModule
+        DropdownModule
     ],
     declarations: [
-        AdministrationComponent
+        AddUserPanelComponent
     ],
     exports: [
-        AdministrationComponent
+        AddUserPanelComponent
     ]
 })
-export class AdministrationModule { }
+export class AddUserPanelModule { }
