@@ -1,4 +1,5 @@
 // Angular Imports
+import { TABLE_DROP_DOWN_COLUMNS } from './table.dropdown.columns';
 import { Component, Inject, OnInit, ViewChild } from '@angular/core';
 
 // OPT Imports
@@ -90,7 +91,7 @@ export class TableComponent implements OnInit {
     }
 
     isDropDownColumn(column: string): boolean {
-        return column == 'Sexo' || column == 'Resultado';
+        return TABLE_DROP_DOWN_COLUMNS.includes(column);
     }
 
     initializeFilterOptions(): void {
