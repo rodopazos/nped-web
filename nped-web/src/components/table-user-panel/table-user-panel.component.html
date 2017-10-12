@@ -1,0 +1,75 @@
+<div class="table-users-panel">
+
+    <p-tabView>
+
+        <p-tabPanel header="Usuarios por salvar">
+
+            <p-dataTable
+                [rows]="10"
+                [paginator]="true"
+                [pageLinks]="5"
+                [responsive]="true"
+                [value]="users">
+
+                <p-column [filter]="true" field="" header="Nombre"></p-column>
+                <p-column [filter]="true" field="" header="Apellido"></p-column>
+                <p-column [filter]="true" field="" header="Rol"></p-column>
+                <p-column [filter]="true" field="" header="Usuario"></p-column>
+
+            </p-dataTable>
+
+            <div class="table-user-panel-buttons">
+
+                <button
+                    pButton
+                    type="button"
+                    icon="fa-check"
+                    class="ui-button-success"
+                    label="Salvar">
+                </button>
+
+                <button
+                    pButton
+                    type="button"
+                    icon="fa-trash"
+                    class="ui-button-danger"
+                    label="Eliminar">
+                </button>
+
+            </div>
+
+        </p-tabPanel>
+
+        <p-tabPanel header="Usuarios en el sistema">
+
+            <p-dataTable
+                [rows]="10"
+                [paginator]="true"
+                [pageLinks]="5"
+                [responsive]="true"
+                [value]="users">
+
+                <p-column [filter]="true" field="" header="Nombre"></p-column>
+                <p-column [filter]="true" field="" header="Apellido"></p-column>
+                <p-column [filter]="true" field="" header="Rol"></p-column>
+                <p-column [filter]="true" field="" header="Usuario"></p-column>
+
+            </p-dataTable>
+
+            <div class="table-user-panel-buttons">
+
+                <button
+                    pButton
+                    type="button"
+                    icon="fa-trash"
+                    class="ui-button-danger"
+                    label="Eliminar">
+                </button>
+
+            </div>
+
+        </p-tabPanel>
+
+    </p-tabView>
+
+</div>

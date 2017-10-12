@@ -5,20 +5,18 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 // This Module's Components
-import { AdministrationComponent } from './administration.component';
-import { AddUserPanelModule } from '../add-user-panel/add-user-panel.module';
-import { TableUserPanelModule } from '../table-user-panel/table-user-panel.module';
+import { TableUserPanelComponent } from './table-user-panel.component';
 
 // Others Imports
 import {
     InputTextModule,
     ButtonModule,
     GrowlModule,
-    DataTableModule,
     SharedModule,
     FieldsetModule,
-    TabViewModule,
-    DropdownModule
+    DropdownModule,
+    DataTableModule,
+    TabViewModule
 } from 'primeng/primeng';
 
 @NgModule({
@@ -33,14 +31,12 @@ import {
         FieldsetModule,
         TabViewModule,
         DropdownModule,
-        AddUserPanelModule,
-        TableUserPanelModule
     ],
     declarations: [
-        AdministrationComponent
+        TableUserPanelComponent
     ],
     exports: [
-        AdministrationComponent
+        TableUserPanelComponent
     ]
 })
-export class AdministrationModule { }
+export class TableUserPanelModule { }
